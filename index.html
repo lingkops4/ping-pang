@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Pong — 帶音效與開始畫面</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Simple Pong</h1>
+
+    <div class="scoreboard">
+      <div class="score">Player: <span id="leftScore">0</span></div>
+      <div class="score">Computer: <span id="rightScore">0</span></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="gameCanvas" width="800" height="500" tabindex="0"></canvas>
+
+      <!-- Start Screen Overlay -->
+      <div id="startScreen" class="overlay">
+        <div class="menu">
+          <h2>Simple Pong</h2>
+          <p class="muted">控制：滑鼠或上下方向鍵移動左方擋板</p>
+
+          <label for="aiSpeed">電腦難度 (速度): <span id="aiSpeedLabel">4</span></label>
+          <input id="aiSpeed" type="range" min="2" max="12" value="4" />
+
+          <label for="volume">音量: <span id="volLabel">80%</span></label>
+          <input id="volume" type="range" min="0" max="100" value="80" />
+
+          <div class="menu-buttons">
+            <button id="startBtn" class="primary">開始遊戲</button>
+            <button id="resetBtn">重設分數</button>
+          </div>
+
+          <p class="muted small">空白鍵：暫停/恢復 · R：重設分數</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <p>Controls: Move mouse over the canvas or use the Up / Down arrow keys to move the left paddle.</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
